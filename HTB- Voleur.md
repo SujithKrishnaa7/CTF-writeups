@@ -44,6 +44,8 @@ kinit <username> --> move the krb5.conf file to the directory /etc/
 
 Now use klist, which lists the tickets
 
+[Note : The krb5.conf file causes biggest headache . I have attached a krb5.conf file,Kindly use that ]
+
 
 
 
