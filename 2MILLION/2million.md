@@ -39,13 +39,43 @@ Pass the GET Request , /api/v1 --You'll find API routes
 I tried several routes, but the PUT method works. It can make our account admin.
 
 <img width="700" height="636" alt="image" src="https://github.com/user-attachments/assets/76d22770-815c-4bc3-a007-4425c5c82a1d" />  
-Change the Content type to JSON . Passing this request,gives us admin rights
+Change the Content type to JSON. Passing this request  gives us admin rights
 
 Again NO IDEA!!!! WHAT TO DO NEXT !!!
 
 I checked with Walkthrough, the next step is Reverse Shell
 
-"/api/v1/admin/vpn/generate" Chnage the Req method and add JSON input ,pass the Command for Reverse Shell
+"/api/v1/admin/vpn/generate" Change the Req method and add JSON input , pass the Command for Reverse Shell
+Open the Listener in Kali 
+
+BOOM !!! REVERSE SHELL ACTIVATED
+
+Don't waste the TIME, open the Database.php file, it calls 4 Environment variables. (Hint)
+
+`ls -la`  
+Displays the .env file, displays the admin password
+Use the password for SSH
+
+`ssh admin@2million.htb`  
+Again NO IDEA!!!! WHAT TO DO NEXT !!!
+
+Reffered to Writeups : The Vulnerability is in Kernel .
+
+I was navigated to the Git repo : `https://github.com/sxlmnwb/CVE-2023-0386`
+
+Next steps were asusual , open a python server and wget in target machine.
+
+The README in repo mentions ,2 shell interaction is needed to escalte privilege . 
+
+Open another shell through SSH and run the two commands in exploit present directory (Refer the README file)
+
+Finally Two flags 
+--8b725c77196768ef0dcea34746aba58c
+--c66d33415921887308bbfdc92d341c82
+
+--------------------------------------------THE END---------------------------------------------------------------
+
+
 
 
 
