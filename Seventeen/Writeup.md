@@ -41,6 +41,30 @@ Enumerated 4 DB.
 
 [*] roundcubedb 
 
+<img width="956" height="296" alt="image" src="https://github.com/user-attachments/assets/6e3c2b4a-fd70-4695-ab1c-5cd36d107796" /> 
+
+When i encounter this oldmanagement, I got confused and reffered Ippsec YT video, it might be another VHOST , guess . It worked though. 
+
+Now password cracking part...... 
+
+
+-------------------------------------------------Initial Access---------------------------------------------- 
+
+Copy these Hashes and pass to Hashcat 
+
+<img width="424" height="195" alt="image" src="https://github.com/user-attachments/assets/e13eac35-37d3-4157-b19e-a1886a0f5a87" /> 
+
+`hashcat --user -m 0  hash.txt /usr/share/wordlists/rockyou.txt` 
+
+Found out the Password for Student:Shane 
+
+Visit "oldmanagement.seventeen.htb" and login with Student ID and pwd .
+
+
+
+
+
+
 
 
 
