@@ -5,6 +5,7 @@
 ---------------------------------------RECON-------------------------------- 
 
 `sudo nmap -sV -sC  -T5 10.129.227.14` 
+
 <img width="643" height="404" alt="image" src="https://github.com/user-attachments/assets/776cd56d-cf27-4166-ade3-c4a7e24caee3" />  
 
 I understood there are two things: this is Web Vulnerability Exploit LAB!!!!!!!!!!!!  
