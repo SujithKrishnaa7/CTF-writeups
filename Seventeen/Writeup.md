@@ -58,7 +58,29 @@ Copy these Hashes and pass to Hashcat
 
 Found out the Password for Student:Shane 
 
-Visit "oldmanagement.seventeen.htb" and login with Student ID and pwd .
+Visit "oldmanagement.seventeen.htb" and login with Student ID and pwd . 
+
+<img width="1919" height="692" alt="image" src="https://github.com/user-attachments/assets/aae597ba-273c-41a4-95ec-43fbc118f29f" /> 
+There is a Uploading Option , I jumped into testing PHP Reverse-Shell. 
+
+Through a lot of enumeration. Using a file storing path in SQLMap, I came to the directory 'oldmanagement/files' 
+Again, a dead end, some walkthrough led me to file storing path 'http://oldmanagement.seventeen.htb:8000/oldmanagement/files/31234/Marksheet-finals.pdf' 
+Through downloading the source code of the school management system, I found out the File Uploading method to escalate RCE. 
+
+Two things 
+
+1) Intercept the request. to upload files.
+2) Change the Student ID for a Shell.PHP upload.
+3) Go to 'http://oldmanagement.seventeen.htb:8000/oldmanagement/files/9001/shell.php?shell=$cmd'
+Though we could escalate the Privileges.
+
+Chnage the Dir to `var/www/html` ,move to employee management . 
+Use `grep -Ri pass /var/www/html/employeemanagementsystem` to search for keyword pass. 
+
+
+
+
+
 
 
 
